@@ -8164,8 +8164,8 @@ if text == ("تحديث السورس") and DevEORO(msg) then
 send(msg.chat_id_,msg.id_,'❆︙تم التحديث')
 os.execute('rm -rf EORO.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/ BRANDTEAM/EORO/mian/EORO.lua')
-os.execute('wget https://raw.githubusercontent.com/BRANDTEAM/EORO/mian/start.lua')
+os.execute('wget https://raw.githubusercontent.com/ BRANDDTEAM/EORO/master/EORO.lua')
+os.execute('wget https://raw.githubusercontent.com/BRANDDTEAM/EORO/master/start.lua')
 dofile('EORO.lua')  
 return false
 end
