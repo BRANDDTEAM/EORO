@@ -8623,10 +8623,14 @@ send(msg.chat_id_, msg.id_, "❆︙تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
 Text = [[
-* .•♫•♬• 𝗪𝗲𝗹𝗰𝗼𝗺 𝘁𝗼 𝘀𝗼𝘂𝗿𝗰𝗲 𝗘𝗼𝗥𝗼•♬•♫•.*
+if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
+Text = [[
+*- ICE 𝖳𝖤𝖠𝖬 .*
  — — — — — — — — — 
-    
-[𖣻︙𝘋𝘦𝘷-𝘴𝘰𝘶𝘳𝘤𝘦  ](http://t.me/BBBVBVV)
+     
+[𖣻︙ICE 𝗌𝗈𝗎𝗋𝖼𝖾  .](http://t.me/ICE53)
+       
+[𖣻︙ 𝚝𝚆𝚂𝙻 𝚂𝚘𝚞𝚛𝚌𝚎](http://t.me/ICE50BOT)
      
 ]]
 send(msg.chat_id_, msg.id_,Text)
