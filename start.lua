@@ -74,7 +74,7 @@ RunBot:write([[
 cd $HOME/EORO
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr EORO.lua
-wget "https://raw.githubusercontent.com/BRANDTEAM/EORO/master/EORO.lua"
+wget "https://raw.githubusercontent.com/BRANDDTEAM/EORO/master/EORO.lua"
 while(true) do
 rm -fr ../.telegram-cli
 ./tg -s ./EORO.lua -p PROFILE --bot=$token
