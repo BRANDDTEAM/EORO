@@ -8622,17 +8622,15 @@ dofile("EORO.lua")
 send(msg.chat_id_, msg.id_, "❆︙تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-local url,res = https.request('https://black-source.tk/BlackTeAM/ChatMember.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.info ~= true then
-send(msg.chat_id_,msg.id_,'❆︙شترك في قناة السورس اولآ @CXRCX .')   
 return false 
 end
 key = {
-{{text = '- 𝘉𝘭𝘢𝘤𝘬 𝘛𝘦𝘢𝘮 .',url="t.me/CXRCX"}},
-{{text = '- 𝘊𝘢𝘭𝘭 𝘜𝘴 .',url="t.me/BBBVVBV"}},
+{{text = '- 𝙀𝙊𝙍𝙊 .',url="t.me/CXRCX"}},
+{{text = '- 𝘥𝘦𝘷 - 𝘚𝘰𝘜𝘳𝘤𝘦 .',url="t.me/BBBVVBV"}},
 }
-send_inline_key(msg.chat_id_,"*- 𝘞𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘵𝘩𝘦 𝘣𝘭𝘢𝘤𝘬 𝘴𝘰𝘶𝘳𝘤𝘦 .*",nil,key,msg.id_/2097152/0.5)
+send_inline_key(msg.chat_id_,"*- .•♫•♬•𝙬𝙚𝙡𝙘𝙤𝙢 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 𝙀𝙤𝙍𝙤 •♬•♫•. .*",nil,key,msg.id_/2097152/0.5)
 end
 if text == 'رابط الحذف' or text == 'بوت الحذف' then  
 if AddChannel(msg.sender_user_id_) == false then
