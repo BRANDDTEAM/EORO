@@ -8691,6 +8691,28 @@ Text = [[
 𓍹ⵧⵧⵧⵧⵧⵧ.•♫•♬•𝙀𝙤𝙍𝙤•♬•♫•.ⵧⵧⵧⵧⵧⵧ𓍻  
 [❆︙Ch Source](t.me/CXRCX)
 ]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'م1', callback_data=msg.sender_user_id_.."/help1"},{text = 'م2', callback_data=msg.sender_user_id_.."/help2"},{text = 'م3', callback_data=msg.sender_user_id_.."/help3"},
+},
+{
+{text = 'م4', callback_data=msg.sender_user_id_.."/help4"},
+},
+{
+{text = 'م5', callback_data=msg.sender_user_id_.."/help5"},
+},
+{
+{text = 'اوامر التعطيل', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=msg.sender_user_id_.."/homelocks"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+end
+
+if text == 'م1' and Addictive(msg) then
+Text = [[
 send(msg.chat_id_, msg.id_,Text)
 return false
 end
