@@ -8622,15 +8622,14 @@ dofile("EORO.lua")
 send(msg.chat_id_, msg.id_, "❆︙تم التحديث")
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-data = JSON.decode(url)
-if data.Ch_Member.info ~= true then
-return false 
-end
-key = {
-{{text = '- 𝙀𝙊𝙍𝙊 .',url="t.me/CXRCX"}},
-{{text = '- 𝘥𝘦𝘷 - 𝘚𝘰𝘜𝘳𝘤𝘦 .',url="t.me/BBBVVBV"}},
-}
-send_inline_key(msg.chat_id_,"*- .•♫•♬•𝙬𝙚𝙡𝙘𝙤𝙢 𝙩𝙤 𝙨𝙤𝙪𝙧𝙘𝙚 𝙀𝙤𝙍𝙤 •♬•♫•. .*",nil,key,msg.id_/2097152/0.5)
+Text = [[
+* .•♫•♬• 𝗪𝗲𝗹𝗰𝗼𝗺 𝘁𝗼 𝘀𝗼𝘂𝗿𝗰𝗲 𝗘𝗼𝗥𝗼•♬•♫•.*
+ — — — — — — — — — 
+    
+[𖣻︙𝘋𝘦𝘷-𝘴𝘰𝘶𝘳𝘤𝘦  ](http://t.me/BBBVBVV)
+     
+]]
+send(msg.chat_id_, msg.id_,Text)
 end
 if text == 'رابط الحذف' or text == 'بوت الحذف' then  
 if AddChannel(msg.sender_user_id_) == false then
