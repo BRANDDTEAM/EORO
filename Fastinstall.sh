@@ -6,8 +6,8 @@ apt install dnsutils
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
 chmod +x EORO
-chmod +x ts
-./ts
+chmod +x er
+./er
 }
 if [ "$1" = "ins" ]; then
 install
