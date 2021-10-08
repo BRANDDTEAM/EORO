@@ -8476,14 +8476,22 @@ File:write(t)
 File:close()
 sendDocument(msg.chat_id_, msg.id_,'./File_Libs/'..bot_id..'.json', '❆︙ عدد مجموعات التي في البوت { '..#list..'}')
 end
-if text == 'المطور' or text == 'مطور' or text == 'المطورين' then
-local Text_Dev = database:get(bot_id..'EORO:Text_Dev')
-if Text_Dev then 
-send(msg.chat_id_, msg.id_,Text_Dev)
+if text == "المطور" or text == "مطور" then
+local TEXT_SUD = database:get(bot_id..'Tshake:TEXT_SUDO')
+if TEXT_SUDO then 
+send(msg.chat_id_, msg.id_,TEXT_SUDO)
 else
-tdcli_function ({ID = "GetUser",user_id_ = Sudo},function(arg,data) 
-send(msg.chat_id_, msg.id_,"❆︙المطور :: ["..data.first_name_.."](T.me/"..data.username_..")")  
-end,nil)   
+tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
+local function taha(extra, taha, success)
+if taha.photos_[0] then
+local Name = ' Dev bot\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..taha.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+else
+sendText(msg.chat_id_,Name,msg.id_/2097152/0.5,'md')
+end end
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = SUDO, offset_ = 0, limit_ = 1 }, taha, nil)
+end,nil)
 end
 end
 if text == 'الملفات' and DevEORO(msg) then
