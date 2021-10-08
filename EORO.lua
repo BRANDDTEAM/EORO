@@ -8680,16 +8680,18 @@ send(msg.chat_id_, msg.id_,'❆︙عـليك الاشـتࢪاك في قنـاة
 end
 return false
 end
-Text = [[
-❆︙ هناك {5} اوامر لعرضها
-𓍹ⵧⵧⵧⵧⵧⵧ.•♫•♬•𝙀𝙤𝙍𝙤•♬•♫•.ⵧⵧⵧⵧⵧⵧ𓍻 
-❆︙ م1 -› لعرض اوامر الحمايه
-❆︙ م2 -› لعرض اوامر الادمنيه
-❆︙ م3 -› لعرض اوامر المدراء
-❆︙ م4 -› لعرض اوامر المنشئين
-❆︙ م5 -› لعرض اوامر المطورين
-𓍹ⵧⵧⵧⵧⵧⵧ.•♫•♬•𝙀𝙤𝙍𝙤•♬•♫•.ⵧⵧⵧⵧⵧⵧ𓍻  
-[❆︙Ch Source](t.me/CXRCX)
+if text == 'الاوامر' or text == 'اوامر' or text == 'الأوامر' then
+if Addictive(msg) then
+local Text =[[
+📮┇هناك {5} اوامر لعرضها
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+🗑┇م1 ~⪼ لعرض اوامر الحمايه
+📚┇م2 ~⪼ لعرض اوامر الادمنيه
+🗓┇م3 ~⪼ لعرض اوامر المدراء
+🎖┇م4 ~⪼ لعرض اوامر المنشئين
+👤┇م5 ~⪼ لعرض اوامر المطورين
+┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
+📡┇CH [@TshakeX]
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -8702,16 +8704,11 @@ keyboard.inline_keyboard = {
 {
 {text = 'م5', callback_data=msg.sender_user_id_.."/help5"},
 },
-{
-{text = 'اوامر التعطيل', callback_data=msg.sender_user_id_.."/homeaddrem"},{text = 'اوامر القفل', callback_data=msg.sender_user_id_.."/homelocks"},
-},
-}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
 
-if text == 'م1' and Addictive(msg) then
 Text = [[
 send(msg.chat_id_, msg.id_,Text)
 return false
